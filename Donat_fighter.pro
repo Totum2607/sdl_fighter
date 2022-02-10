@@ -10,7 +10,9 @@ SOURCES += \
         onEvent.cpp \
         onExexute.cpp \
         onInit.cpp \
-        onQuit.cpp
+        onLoop.cpp \
+        onQuit.cpp \
+        onRender.cpp
 
 HEADERS += \
     Game.h \

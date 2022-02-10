@@ -2,7 +2,7 @@
 #include "config.h"
 #include <iostream>
 
-void MainApp::onInit(){
+void Game::onInit(){
     if(SDL_Init(SDL_INIT_EVERYTHING)){
         std::cout << "Error of the inicialisation " << SDL_GetError();
     } else{
@@ -12,13 +12,18 @@ void MainApp::onInit(){
                                               WINDOW_HEIGHT,
                                               SDL_WINDOW_RESIZABLE);
 
-        screen = SDL_GetWindowSurface(window);
+        renderer = SDL_CreateRenderer(window, -1, 0);
+        loader = IMG_Load("res/human.phg");
 
-        rect = SDL_CreateRGBSurface(0, WINDOW_WIDTH, WINDOW_HEIGHT, 32, 0, 0, 0, 0);
+        SDL_Rect humanRect = {0, 0, 350, 800};
+        SDL_Rect rendererRect = {0, 600, 150, 150};
 
-        SDL_FillRect(rect, NULL, SDL_MapRGB(rect->format, 255, 200, 0));
-        SDL_BlitSurface(rect, NULL, screen, NULL);
+        int humanChange = 0;
+        int humanWidth = 380;
 
+        leftFighter = new Hero(humanRect, rendererRect, humanChange, humanWidth, loader, renderer);
+
+        SDL_FreeSurface(loader);
 
 
     }

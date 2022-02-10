@@ -3,6 +3,6 @@
 
 int main()
 {
-    MainApp game;
-    return game.exec();
+    Game game;
+    return game.onExecute();
 }

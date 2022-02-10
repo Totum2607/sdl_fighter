@@ -1,15 +1,11 @@
 #include <Game.h>
 
-int MainApp::exec(){
+int Game::onExecute(){
 
     onInit();
 
-    while(running){
+    onLoop();
 
-    onEvent();
-    SDL_UpdateWindowSurface(window);
-
-}
     onQuit();
     return 0;
 }

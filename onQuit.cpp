@@ -1,6 +1,5 @@
 #include "Game.h"
 
-void MainApp::onQuit(){
+void Game::onQuit(){
         SDL_DestroyWindow(window);
-        SDL_FreeSurface(screen);
 }

@@ -6,7 +6,8 @@
 
 class Hero{
 public:
-    Hero(SDL_Rect heroR, SDL_Rect renderR, int change, int width, SDL_Surface *image, SDL_Renderer *renderer);
+    Hero(SDL_Rect heroR, SDL_Rect renderR, int change, int width, SDL_Surface * image, SDL_Renderer *renderer)
+    : heroChange(change), heroWidth(width), heroRect(heroR), rendererRect(renderR), hero(SDL_CreateTextureFromSurface(renderer,image)){}
     ~Hero(){};
 
     SDL_Rect heroRect;
@@ -14,7 +15,7 @@ public:
     SDL_Texture *hero;
 
     int getHeroChange();
-    void setHeroChange();
+    void setHeroChange(int x);
     int getHeroWidth();
 
 private:

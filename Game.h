@@ -27,6 +27,9 @@ private:
     SDL_Surface *loader;
     SDL_Event event;
 
+    Hero *leftFighter;
+    Hero *rightFiter;
+
 
     bool running;
     bool fingerDown;
