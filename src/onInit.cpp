@@ -1,5 +1,5 @@
-#include "Game.h"
-#include "config.h"
+#include "includes/Game.h"
+#include "includes/config.h"
 #include <iostream>
 
 void Game::onInit(){

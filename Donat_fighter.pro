@@ -5,16 +5,16 @@ CONFIG -= qt
 LIBS = -lSDL2 -lSDL2_image
 
 SOURCES += \
-        Hero.cpp \
-        main.cpp \
-        onEvent.cpp \
-        onExexute.cpp \
-        onInit.cpp \
-        onLoop.cpp \
-        onQuit.cpp \
-        onRender.cpp
+        src/Hero.cpp \
+        src/main.cpp \
+        src/onEvent.cpp \
+        src/onExexute.cpp \
+        src/onInit.cpp \
+        src/onLoop.cpp \
+        src/onQuit.cpp \
+        src/onRender.cpp
 
 HEADERS += \
-    Game.h \
-    Hero.h \
-    config.h
+    includes/Game.h \
+    includes/Hero.h \
+    includes/config.h

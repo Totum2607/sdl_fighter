@@ -2,7 +2,7 @@
 #define HERO_H
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
-#include <config.h>
+#include <includes/config.h>
 
 class Hero{
 public:

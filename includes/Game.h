@@ -3,7 +3,7 @@
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_image.h>
 #include "Hero.h"
-#include <config.h>
+#include <includes/config.h>
 
 
 class Game{
